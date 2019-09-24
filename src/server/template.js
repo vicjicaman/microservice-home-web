@@ -1,17 +1,13 @@
 import fs from "fs";
 
-export const header = ({
-  paths:{
-    base: basePath
-  }
-}) => {
+export const header = ({ paths: { resources: resourcesPath } }) => {
   return `<!DOCTYPE html>
     <html>
         <head>
           <meta charset="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="${basePath}/bootstrap/css/bootstrap.min.css"/>
-          <link rel="stylesheet" href="${basePath}/font-awesome/css/font-awesome.css"/>
+          <link rel="stylesheet" href="${resourcesPath}/bootstrap/css/bootstrap.min.css"/>
+          <link rel="stylesheet" href="${resourcesPath}/font-awesome/css/font-awesome.css"/>
 
 
           <title>Microservices</title>
@@ -23,10 +19,8 @@ export const header = ({
 
 export const footer = ({
   config,
-  config:{
-    paths:{
-      base: basePath
-    }
+  config: {
+    paths: { base: basePath, resources: resourcesPath }
   },
   preloadedState,
   preloadedGraphState
@@ -47,8 +41,8 @@ export const footer = ({
                   preloadedGraphState
                 ).replace(/</g, "\\u003c")}
             </script>
-            <script language="javascript" src="${basePath}/jquery/jquery.min.js"></script>
-            <script language="javascript" src="${basePath}/bootstrap/js/bootstrap.min.js"></script>
+            <script language="javascript" src="${resourcesPath}/jquery/jquery.min.js"></script>
+            <script language="javascript" src="${resourcesPath}/bootstrap/js/bootstrap.min.js"></script>
             <script src="${basePath}/app/index.js"></script>
         </body>
     </html>

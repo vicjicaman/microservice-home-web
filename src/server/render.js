@@ -17,7 +17,7 @@ const createMemoryHistory = require("history").createMemoryHistory;
 export const render = (
   {
     App,
-    paths: { base: BASE_ROUTE_APP },
+    paths: { resources: RESOURCES_BASE_ROUTE, base: BASE_ROUTE },
     urls: {
       external: { graphql: EXTERNAL_URL_GRAPH, events: EXTERNAL_URL_EVENTS },
       internal: { graphql: INTERNAL_URL_GRAPH, events: INTERNAL_URL_EVENTS }
@@ -51,11 +51,13 @@ export const render = (
     .then(() => {
       const preloadedState = store.getState();
       const htmlSteam =
-        Template.header({ paths: { base: BASE_ROUTE_APP } }) +
+        Template.header({
+          paths: { base: BASE_ROUTE, resources: RESOURCES_BASE_ROUTE }
+        }) +
         renderToString(AppRoot) +
         Template.footer({
           config: {
-            paths: { base: BASE_ROUTE_APP },
+            paths: { base: BASE_ROUTE, resources: RESOURCES_BASE_ROUTE },
             urls: {
               graphql: EXTERNAL_URL_GRAPH,
               events: EXTERNAL_URL_EVENTS

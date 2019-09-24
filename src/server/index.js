@@ -8,10 +8,13 @@ import App from "../common/App.js";
 import { reducers, watchers } from "../common/state";
 
 const HOME_BASE_ROUTE_APP =
-  process.env["HOME_BASE_ROUTE_APP"] === "/" ? "" : process.env["HOME_BASE_ROUTE_APP"];
-const HOME_INTERNAL_URL_GRAPH =  process.env["HOME_INTERNAL_URL_GRAPH"];
-const HOME_EXTERNAL_URL_GRAPH =  process.env["HOME_EXTERNAL_URL_GRAPH"];
+  process.env["HOME_BASE_ROUTE_APP"] === "/"
+    ? ""
+    : process.env["HOME_BASE_ROUTE_APP"];
+const HOME_INTERNAL_URL_GRAPH = process.env["HOME_INTERNAL_URL_GRAPH"];
+const HOME_EXTERNAL_URL_GRAPH = process.env["HOME_EXTERNAL_URL_GRAPH"];
 const HOME_INTERNAL_PORT_APP = process.env["HOME_INTERNAL_PORT_APP"];
+const RESOURCE_BASE_ROUTE = process.env["RESOURCE_BASE_ROUTE"];
 
 const app = express();
 
@@ -40,7 +43,8 @@ app.get("/*", (req, res) => {
       watchers,
       reducers,
       paths: {
-        base: HOME_BASE_ROUTE_APP
+        base: HOME_BASE_ROUTE_APP,
+        resources: RESOURCE_BASE_ROUTE
       },
       urls: {
         external: {
