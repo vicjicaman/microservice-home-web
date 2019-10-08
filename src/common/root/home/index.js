@@ -45,13 +45,31 @@ export default ({ history }) => (
 
             return (
               <ul className="list-group">
-                {list.map(({ id, name, type }) => (
+                {list.map(({ id, name, type, pods: { list: pods } }) => (
                   <li
                     className="list-group-item d-flex justify-content-between align-items-center"
                     key={id}
                   >
                     <span>
                       <i className="text-success fa fa-check"> </i> {name}
+                      <ul>
+                        {pods.map(({ name, status }) => (
+                          <li className="small">
+                            <span
+                              class={
+                                "badge text-small " +
+                                (status === "Running"
+                                  ? "badge-success"
+                                  : "badge-warning") +
+                                " badge-pill"
+                              }
+                            >
+                              {status}
+                            </span>{" "}
+                            {name}
+                          </li>
+                        ))}
+                      </ul>
                     </span>{" "}
                     <span
                       class={
