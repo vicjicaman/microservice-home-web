@@ -25,7 +25,7 @@ export default ({ history }) => (
       </Query>
     </div>
     <div className="row justify-content-md-center ">
-      <div className="col-8">
+      <div className="col-md-8">
         <Query query={Cluster.SERVICES}>
           {({ loading, error, data }) => {
             if (loading) return <p>Loading...</p>;
