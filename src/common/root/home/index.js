@@ -53,10 +53,10 @@ export default ({ history }) => (
                     <span>
                       <i className="text-success fa fa-check"> </i> {name}
                       <ul>
-                        {pods.map(({ name, status }) => (
-                          <li className="small">
+                        {pods.map(({ id, name, status }) => (
+                          <li key={id} className="small">
                             <span
-                              class={
+                              className={
                                 "badge text-small " +
                                 (status === "Running"
                                   ? "badge-success"
@@ -72,7 +72,7 @@ export default ({ history }) => (
                       </ul>
                     </span>{" "}
                     <span
-                      class={
+                      className={
                         "badge text-small " +
                         (type === "NodePort"
                           ? "badge-primary"
