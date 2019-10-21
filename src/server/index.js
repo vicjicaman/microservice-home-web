@@ -7,6 +7,7 @@ import { render } from "./render";
 import App from "../common/App.js";
 import { reducers, watchers } from "../common/state";
 import * as Logger from "@nebulario/microservice-logger";
+import * as Utils from "@nebulario/microservice-utils";
 
 const HOME_BASE_ROUTE_APP =
   process.env["HOME_BASE_ROUTE_APP"] === "/"
@@ -16,7 +17,6 @@ const HOME_INTERNAL_URL_GRAPH = process.env["HOME_INTERNAL_URL_GRAPH"];
 const HOME_EXTERNAL_URL_GRAPH = process.env["HOME_EXTERNAL_URL_GRAPH"];
 const HOME_INTERNAL_PORT_APP = process.env["HOME_INTERNAL_PORT_APP"];
 const RESOURCE_BASE_ROUTE = process.env["RESOURCE_BASE_ROUTE"];
-
 
 const logger = Logger.create({ path: "/var/log/app" });
 
@@ -56,3 +56,5 @@ app.get("/*", (req, res) => {
 app.listen(HOME_INTERNAL_PORT_APP, () => {
   console.log(`Server is listening on port... ${HOME_INTERNAL_PORT_APP}`);
 });
+
+Utils.Process.shutdown(signal => console.log("shutdown " + signal));
