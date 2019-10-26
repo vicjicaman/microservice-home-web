@@ -54,7 +54,7 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(HOME_INTERNAL_PORT_APP, () => {
-  console.log(`Server is listening on port... ${HOME_INTERNAL_PORT_APP}`);
+  console.log(`Server is listening on port... (UPDATE) ${HOME_INTERNAL_PORT_APP}`);
 });
 
 Utils.Process.shutdown(signal => console.log("shutdown " + signal));

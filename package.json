@@ -35,7 +35,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.1.0",
     "@nebulario/microservice-layout": "1.70.2-master",
-    "@nebulario/microservice-logger": "1.70.1-home-intro-prod",
+    "@nebulario/microservice-logger": "link:./../microservice-logger",
     "@nebulario/microservice-utils": "1.70.0-master",
     "apollo-boost": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.3",

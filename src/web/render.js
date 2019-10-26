@@ -42,7 +42,7 @@ export const render = ({
 };
 
 const configureGraph = ({ url, initState }) => {
-  
+
   return new ApolloClient({
     cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
     link: new HttpLink({ uri: url })

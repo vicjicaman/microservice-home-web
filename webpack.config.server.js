@@ -1,4 +1,5 @@
 const path = require("path");
+const {WatchRunPlugin} = require("./webpack.config.common");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
       }
     ]
   },
+  plugins: [new WatchRunPlugin("server")],
   resolve: {
     alias: {
       Root: path.resolve(__dirname, "src/common/root"),

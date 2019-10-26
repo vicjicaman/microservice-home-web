@@ -772,17 +772,9 @@
   resolved "https://registry.yarnpkg.com/@nebulario/microservice-layout/-/microservice-layout-1.70.2-master.tgz#04d69b7a601576b37c2b87aa03eedfd476de874b"
   integrity sha512-ecHV1gwf7wMQ/vITdWhazq1tzshIuqZrW+ZQuhGTOifIE5XCKrIhhZyLG5x/V/QjN6RvNXkMGwwL2bP0EcZpSQ==
 
-"@nebulario/microservice-logger@1.70.1-home-intro-prod":
-  version "1.70.1-home-intro-prod"
-  resolved "https://registry.yarnpkg.com/@nebulario/microservice-logger/-/microservice-logger-1.70.1-home-intro-prod.tgz#4f5995213a8c9d51827994eab21ef0747b047c97"
-  integrity sha512-orCrTa+9avOdOsaqI9YsniZjwOKvsYKRN+vRJvJRbx0cSPfOdoyHDK8tmjPFpaemIEJ0iqIEj/R0Kev7SpIL/Q==
-  dependencies:
-    "@babel/runtime" "^7.6.0"
-    "@babel/runtime-corejs3" "^7.6.0"
-    express-request-id "^1.4.1"
-    morgan "^1.9.1"
-    winston "^3.2.0"
-    winston-daily-rotate-file "^4.2.1"
+"@nebulario/microservice-logger@link:../microservice-logger":
+  version "0.0.0"
+  uid ""
 
 "@nebulario/microservice-utils@1.70.0-master":
   version "1.70.0-master"
