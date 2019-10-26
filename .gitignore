@@ -5,7 +5,6 @@
 # production
 **/dist
 **/tmp
-**/service
 **/__generated__
 **/logs
 
