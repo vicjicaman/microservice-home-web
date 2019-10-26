@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/microservice-home-web",
-  "version": "1.70.3-home-intro-prod",
+  "version": "1.70.4-home-intro-prod",
   "main": "index.js",
   "repository": "git@github.com:vicjicaman/microservice-home.git",
   "author": "Victor Jimenez <vic.jicama@gmail.com>",
