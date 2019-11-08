@@ -56,10 +56,10 @@ const cxt = {
   });
 
   app.listen(HOME_INTERNAL_PORT_APP, () => {
-    console.log(
-      `Server is listening on port. ${HOME_INTERNAL_PORT_APP}`
-    );
+    cxt.logger.info("service.running", { port: HOME_INTERNAL_PORT_APP });
   });
 })().catch(e => cxt.logger.error("service.error", { error: e.toString() }));
 
-Utils.Process.shutdown(signal => console.log("shutdown " + signal));
+Utils.Process.shutdown(signal =>
+  cxt.logger.info("service.shutdown", { signal })
+);
