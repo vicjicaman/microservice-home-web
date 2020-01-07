@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/microservice-home-web",
-  "version": "1.70.4-master",
+  "version": "1.70.0-auth-common-update-prod",
   "main": "index.js",
   "repository": "git@github.com:vicjicaman/microservice-home.git",
   "author": "Victor Jimenez <vic.jicama@gmail.com>",
